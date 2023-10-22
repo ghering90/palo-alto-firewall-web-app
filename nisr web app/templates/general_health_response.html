@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+<h1>{% block title %} Firewall General Health Output {% endblock %}</h1>
+<h3>Device</h3>
+<p>{{value[2]}}</p>
+<h3>HA Mode</h3>
+<p>{{value[3]}}</p>
+<h3>HA State</h3>
+<p>{{value[4]}}</p>
+<h3>Firewall Management Up Time</h3>
+<p>{{value[0]}}</p>
+<h3>Firewall Data Plane Up Time</h3>
+<p>{{value[1]}}</p>
+<h3>Firewall Connection To Panorama</h3>
+<p>{{value[5][0]}}<br>{{value[5][1]}}</p>
+
+    <h3>Firewall Interfaces</h3>
+    {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+
+{% endblock %}
+
+
+</body>
+</html>

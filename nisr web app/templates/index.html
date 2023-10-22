@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <title>NISR</title>-->
+    <link rel="stylesheet" href="{{ url_for('static', filename= '/css/style.css') }}">
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to NISR {% endblock %}</h1>
+<h2>this is a learning project</h2>
+{% endblock %}
+
+</body>
+</html>

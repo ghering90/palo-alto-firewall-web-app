@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Traffic Log Form {% endblock %}</h1>
+
+<div class="rgrp" style="visibility:{{ visibility }}">
+    <h1>wrong input</h1>
+</div>
+<form action="/Traffic_response" method="post">
+    <label for="device">Firewall Device:</label><br>
+  <input type="text" id="device" name="device" value="" required="required"><br>
+  <label for="src_ip">Source IP:</label><br>
+  <input type="text" id="src_ip" name="src_ip" value=""><br>
+  <label for="dst_ip">Destination IP:</label><br>
+  <input type="text" id="dst_ip" name="dst_ip" value=""><br><br>
+    <label for="port">Port:</label><br>
+  <input type="text" id="port" name="port" value=""><br><br>
+    <label for="time_start">Start Time:</label><br>
+  <input type="text" id="time_start" name="time_start" value=""><br><br>
+    <label for="time_stop">End Time:</label><br>
+  <input type="text" id="time_stop" name="time_stop" value=""><br><br>
+  <input id="submitButton" type="submit" value="Submit">
+</form>
+{% endblock %}
+
+</body>
+</html>

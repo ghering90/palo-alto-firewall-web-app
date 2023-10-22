@@ -1,0 +1,22 @@
+h1 {
+    border: 2px #eee solid;
+    color: #006699;
+    text-align: center;
+    padding: 10px;
+}
+#ibm {
+    color: #006699;
+}
+
+.center{
+
+}
+.container{
+
+}
+.alert {
+            padding: 20px;
+            margin: 5px;
+            color: #970020;
+            background-color: #ffd5de;
+        }
